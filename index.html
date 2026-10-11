@@ -7,8 +7,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Dinner">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="theme-color" content="#F1F4EF" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#111713" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F6F3EE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15110F" media="(prefers-color-scheme: dark)">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="icon" type="image/png" href="icon-512.png">
@@ -23,24 +23,24 @@ img{max-width:100%}
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* Layout: phone-first single column; tonight's pick is a kitchen order ticket, cheat mode swaps basil green for ketchup + mustard */
+/* Layout: phone-first single column; tonight's pick is a kitchen order ticket. Diner palette: ketchup red + mustard yellow; cheat days add the mustard stripes */
 :root{
-  --bg:#F1F4EF; --surface:#FFFFFF; --ink:#1B2520; --muted:#5A6A61; --line:#D6DDD4;
-  --basil:#2E6B4A; --basil-soft:#E1EDE4; --ketchup:#D2412A; --mustard:#F2B705; --mustard-ink:#3A2C00;
-  --hot:var(--basil); --hot-soft:var(--basil-soft); --on-hot:#FFFFFF;
+  --bg:#F6F3EE; --surface:#FFFFFF; --ink:#221C18; --muted:#6B625A; --line:#E2DBD2;
+  --basil:#2E7D4F; --basil-soft:#E1EDE4; --ketchup:#DA291C; --mustard:#FFC72C; --mustard-ink:#3A2C00;
+  --hot:var(--ketchup); --hot-soft:color-mix(in srgb, var(--mustard) 26%, var(--surface)); --on-hot:#FFFFFF;
   --f-display:"Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
   --f-body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
   --f-mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
   --r:14px;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#111713; --surface:#1A221D; --ink:#E7EDE8; --muted:#97A69D; --line:#2B3630;
-  --basil:#6DBE8E; --basil-soft:#1F3328; --ketchup:#F0664E; --mustard:#F5C542; --mustard-ink:#2A2000; --on-hot:#0E1511; color-scheme:dark}}
+  --bg:#15110F; --surface:#201A17; --ink:#F1EBE5; --muted:#A79C92; --line:#352D28;
+  --basil:#6DBE8E; --basil-soft:#1F3328; --ketchup:#E23B2E; --mustard:#FFC72C; --mustard-ink:#2A2000; --on-hot:#FFFFFF;
+  --hot-soft:color-mix(in srgb, var(--mustard) 16%, var(--surface)); color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#111713; --surface:#1A221D; --ink:#E7EDE8; --muted:#97A69D; --line:#2B3630;
-  --basil:#6DBE8E; --basil-soft:#1F3328; --ketchup:#F0664E; --mustard:#F5C542; --mustard-ink:#2A2000; --on-hot:#0E1511; color-scheme:dark}
-body.cheat{--hot:var(--ketchup); --hot-soft:color-mix(in srgb, var(--mustard) 22%, var(--surface))}
-body.cheat{--on-hot:#FFFFFF}
+  --bg:#15110F; --surface:#201A17; --ink:#F1EBE5; --muted:#A79C92; --line:#352D28;
+  --basil:#6DBE8E; --basil-soft:#1F3328; --ketchup:#E23B2E; --mustard:#FFC72C; --mustard-ink:#2A2000; --on-hot:#FFFFFF;
+  --hot-soft:color-mix(in srgb, var(--mustard) 16%, var(--surface)); color-scheme:dark}
 
 *{box-sizing:border-box}
 html,body{background:var(--bg)}
